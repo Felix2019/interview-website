@@ -1,56 +1,49 @@
 ---
+import AppBar from "../components/app_bar.astro";
+import Footer from "../components/footer.astro"
+
 export interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props as Props;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
-<style>
-	:root {
-		--font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
-		--font-size-lg: clamp(1.2rem, 0.7vw + 1.2rem, 1.5rem);
-		--font-size-xl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <AppBar />
+    <slot />
+    <Footer/>
+  </body>
+  </html>
 
-		--color-text: hsl(12, 5%, 4%);
-		--color-bg: hsl(10, 21%, 95%);
-		--color-border: hsl(17, 24%, 90%);
-	}
+    <style>
+      @font-face {
+        font-family: "Readex Pro";
+        src: url("/fonts/ReadexPro-Regular.ttf");
+      }
 
-	html {
-		font-family: system-ui, sans-serif;
-		font-size: var(--font-size-base);
-		color: var(--color-text);
-		background-color: var(--color-bg);
-	}
+      @font-face {
+        font-family: "Plus Jakarta Sans";
+        src: url("/fonts/PlusJakartaSans-Regular.ttf");
+      }
 
-	body {
-		margin: 0;
-	}
+      @font-face {
+        font-family: "Bungee Shade";
+        src: url("/fonts/BungeeShade-Regular.ttf");
+      }
 
-	:global(h1) {
-		font-size: var(--font-size-xl);
-	}
-
-	:global(h2) {
-		font-size: var(--font-size-lg);
-	}
-
-	:global(code) {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
+      html {
+        /* font-family: "Plus Jakarta Sans", sans-serif; */
+        font-family: "Readex Pro", sans-serif;
+      }
 </style>
+
