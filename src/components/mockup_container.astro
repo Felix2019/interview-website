@@ -2,6 +2,10 @@
 import mockup from "../assets/interview_trailer.mp4";
 ---
 
-<div class="w-full h-full flex justify-center  md:w-1/2">
-  <video class="md:rounded-xl md:shadow " src={mockup} autoplay loop></video>
+<div
+  class="h-full w-full flex justify-center md:basis-1/2 md:items-center"
+>
+  <video class="md:rounded-2xl md:shadow h-5/6" preload="auto" autoplay loop muted>
+    <source src={mockup} type="video/mp4" />
+  </video>
 </div>

@@ -1,10 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import AppBar from "../components/app_bar.astro";
 ---
 
-<Layout title="Privacy Policy">
+<Layout title="Interview App Privacy Policy">
   <main>
-    <div class="p-5 space-y-4">
+    <AppBar />
+
+    <div class="p-5 space-y-4 bg-background">
       <h1 class="font-bold text-lg">Privacy Policy</h1>
 
       <h2 id="m14">Einleitung</h2>
@@ -84,6 +87,7 @@ import Layout from "../layouts/Layout.astro";
       Impressum:
       <p>
         <a href="https://interview-app.com/imprint" target="_blank"
+        aria-label="Interview App"
           >https://interview-app.com/imprint</a
         >
       </p>

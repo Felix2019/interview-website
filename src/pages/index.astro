@@ -1,14 +1,19 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import TextContainer from "../components/text_container.astro";
+import HeaderContainer from "../components/header_container.astro";
 import MockupContainer from "../components/mockup_container.astro";
+import AppBar from "../components/app_bar.astro";
 ---
 
-<Layout title="Interview">
+<Layout title="Interview: The Social Questions App">
   <main
-    class="flex flex-col space-y-12 bg-background md:flex-row md:h-screen md:space-y-0"
+    class="flex flex-col space-y-12 bg-background md:flex-row md:space-y-0 md:h-screen"
   >
-    <TextContainer />
+    <div class="md:basis-1/2 md:flex md:flex-col">
+      <AppBar />
+      <HeaderContainer />
+    </div>
+
     <MockupContainer />
   </main>
 </Layout>

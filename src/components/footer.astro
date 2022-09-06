@@ -14,6 +14,7 @@ const infoItems = [
 
 const socialItems = [
   {
+    title: "Instagram",
     icon: "logos:instagram-icon",
     link: "https://www.instagram.com/interview_app",
   },
@@ -30,7 +31,7 @@ const socialItems = [
       {
         infoItems.map((data) => (
           <li>
-            <a href={data.link} target="_blank">
+            <a href={data.link} target="_blank" aria-label={data.title}>
               <span class="text-sm text-gray-500 hover:underline">
                 {data.title}
               </span>
@@ -44,7 +45,7 @@ const socialItems = [
       {
         socialItems.map((data) => (
           <li>
-            <a href={data.link} target="_blank" rel="noopener noreferrer">
+            <a href={data.link} target="_blank" rel="noopener noreferrer" aria-label={data.title}>
               <div class="w-4 h-4">
                 <Icon name={data.icon} />
               </div>
