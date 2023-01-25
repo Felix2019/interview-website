@@ -7,7 +7,7 @@
     <div v-else class="w-full md:w-2/3 lg:1/4">
       <div class="bg-secondary rounded-t-xl shadow p-3 space-y-8">
         <!-- question content -->
-        <div class="bg-white rounded-lg p-2.5">{{ question.content }}</div>
+        <!-- <div class="bg-white rounded-lg p-2.5">{{ question.content }}</div> -->
 
         <div class="flex justify-between">
           <!-- user chip -->
@@ -21,7 +21,7 @@
               class="bg-white rounded-full shadow w-6 h-6"
             /> -->
             <!-- username -->
-            <span class="font-bold">{{ question.user.username }}</span>
+            <!-- <span class="font-bold">{{ question.user.username }}</span> -->
           </div>
 
           <!-- result button -->
@@ -42,7 +42,7 @@
           >
             <Icon icon="mdi:arrow-right" width="26" height="26" />
 
-            <span class="font-bold text-left">{{ question.answerRight }}</span>
+            <!-- <span class="font-bold text-left">{{ question.answerRight }}</span> -->
           </button>
 
           <!-- left button -->
@@ -51,7 +51,7 @@
           >
             <Icon icon="mdi:arrow-left" width="26" height="26" />
 
-            <span class="font-bold text-left">{{ question.answerLeft }}</span>
+            <!-- <span class="font-bold text-left">{{ question.answerLeft }}</span> -->
           </button>
         </div>
 
@@ -65,7 +65,7 @@
           <button @click="share" class="bg-secondary rounded-xl p-2.5 shadow">
             <Icon icon="mdi:share-variant" width="20" height="20" />
           </button>
-          <p class="text-sm font-bold">{{ question.shareCount }}</p>
+          <!-- <p class="text-sm font-bold">{{ question.shareCount }}</p> -->
         </span>
 
         <!-- comment btn -->
@@ -73,7 +73,7 @@
           <button class="bg-secondary rounded-xl p-2.5 shadow">
             <Icon icon="mdi:comment-outline" width="20" height="20" />
           </button>
-          <p class="text-sm font-bold">{{ question.commentCount }}</p>
+          <!-- <p class="text-sm font-bold">{{ question.commentCount }}</p> -->
         </span>
 
         <!-- like btn -->
@@ -81,7 +81,7 @@
           <button class="bg-secondary rounded-xl p-2.5 shadow">
             <Icon icon="mdi:heart-outline" width="20" height="20" />
           </button>
-          <p class="text-sm font-bold">{{ question.likeCount }}</p>
+          <!-- <p class="text-sm font-bold">{{ question.likeCount }}</p> -->
         </span>
       </div>
     </div>
@@ -90,9 +90,9 @@
 
 <script lang="ts">
 import { ref, onBeforeMount, Ref } from "vue";
-import Loader from "../components/loader.vue";
-import { Icon } from "@iconify/vue";
-import { useRoute } from "vue-router";
+// import Loader from "../components/loader.vue";
+// import { Icon } from "@iconify/vue";
+// import { useRoute } from "vue-router";
 
 interface User {
   id: String;
@@ -114,16 +114,16 @@ interface Question {
 }
 
 export default {
-  components: { Loader, Icon },
+  // components: { Loader, Icon },
   setup() {
     const question: Ref<Question | null> = ref(null);
     const isLoading: Ref<boolean> = ref(true);
     const error: Ref<unknown | null> = ref(null);
 
-    const route = useRoute();
+    // const route = useRoute();
 
-    // const qid = "903d8fc1-5f05-49b4-b8d8-ed57d332fa48";
-    const qid = route.params.id;
+    const qid = "903d8fc1-5f05-49b4-b8d8-ed57d332fa48";
+    // const qid = route.params.id;
 
     // const url = `https://api.interview-app.com/questions/${qid}`;
     const url: RequestInfo = `https://interview-server-staging.herokuapp.com/questions/${qid}`;

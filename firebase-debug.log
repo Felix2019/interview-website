@@ -1,0 +1,71 @@
+[debug] [2023-01-25T12:00:37.719Z] ----------------------------------------------------------------------
+[debug] [2023-01-25T12:00:37.721Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2023-01-25T12:00:37.722Z] CLI Version:   11.21.0
+[debug] [2023-01-25T12:00:37.722Z] Platform:      darwin
+[debug] [2023-01-25T12:00:37.722Z] Node Version:  v16.15.1
+[debug] [2023-01-25T12:00:37.725Z] Time:          Wed Jan 25 2023 13:00:37 GMT+0100 (Mitteleuropäische Normalzeit)
+[debug] [2023-01-25T12:00:37.726Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-01-25T12:00:37.824Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-01-25T12:00:37.825Z] > authorizing via signed-in user (turtlelab.developer@gmail.com)
+[debug] [2023-01-25T12:00:37.826Z] [iam] checking project interview-554ba for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-01-25T12:00:37.827Z] > refreshing access token with scopes: []
+[debug] [2023-01-25T12:00:37.829Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-01-25T12:00:37.830Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-01-25T12:00:38.002Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-01-25T12:00:38.004Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-01-25T12:00:38.023Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/interview-554ba:testIamPermissions [none]
+[debug] [2023-01-25T12:00:38.024Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/interview-554ba:testIamPermissions x-goog-quota-user=projects/interview-554ba
+[debug] [2023-01-25T12:00:38.026Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/interview-554ba:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-01-25T12:00:38.792Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/interview-554ba:testIamPermissions 200
+[debug] [2023-01-25T12:00:38.795Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/interview-554ba:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-01-25T12:00:38.798Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/interview-554ba [none]
+[debug] [2023-01-25T12:00:39.127Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/interview-554ba 200
+[debug] [2023-01-25T12:00:39.129Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/interview-554ba {"projectId":"interview-554ba","projectNumber":"322405823179","displayName":"interview","name":"projects/interview-554ba","resources":{"hostingSite":"interview-554ba","realtimeDatabaseInstance":"interview-554ba","storageBucket":"interview-554ba.appspot.com","locationId":"europe-west"},"state":"ACTIVE","etag":"1_e21c268e-0d28-4105-86d1-23eca2b2da8e"}
+[info] 
+[info] === Deploying to 'interview-554ba'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2023-01-25T12:00:39.135Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/interview-app-9/versions [none]
+[debug] [2023-01-25T12:00:39.138Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/interview-app-9/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-01-25T12:00:40.390Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/interview-app-9/versions 200
+[debug] [2023-01-25T12:00:40.392Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/interview-app-9/versions {"name":"projects/322405823179/sites/interview-app-9/versions/bee74eff0f6a1df0","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[interview-app-9]: beginning deploy... 
+[info] i  hosting[interview-app-9]: found 12 files in dist 
+[debug] [2023-01-25T12:00:40.407Z] [hosting] uploading with 200 concurrency
+[debug] [2023-01-25T12:00:40.450Z] [hosting] hash cache [ZGlzdA] stored for 12 files
+[debug] [2023-01-25T12:00:40.450Z] [hosting][hash queue][FINAL] {"max":34,"min":14,"avg":17.666666666666668,"active":0,"complete":12,"success":12,"errored":0,"retried":0,"total":12,"elapsed":39}
+[debug] [2023-01-25T12:00:40.451Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/322405823179/sites/interview-app-9/versions/bee74eff0f6a1df0:populateFiles [none]
+[debug] [2023-01-25T12:00:40.451Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/322405823179/sites/interview-app-9/versions/bee74eff0f6a1df0:populateFiles {"files":{"/favicon-16x16.png":"e9e11a0ad480902ce5c957d835535290a6259d7796f3f821d2e8d4dbe738b37a","/sitemap-0.xml":"91eb2684146961790138023757bf665a4e4811c015371f75d1b06808cfa2d433","/index.html":"dbfde063f192e509b7310e55bd188c61a881c81f9142c8f9e71b2c02ae8f63a2","/favicon-32x32.png":"56784002d26218f1a36ab38faf0182be501b8e23ae3c32c5aa49c7a25b5e0b4b","/sitemap-index.xml":"d1c368caab38ad436411801a91890d136f7bc7b8ce88e69f21c0e3b42ca9e295","/_astro/index.835254ab.css":"7f4132cedd8f99de86699c09b6b983e438d849cfa6c14db0c2a7abe87eee1000","/_astro/logo_background.0ff11165.png":"988f2fb3dfe1f0be1d8b0e2daf53c8d95dd4e93217a3d4e03fc677875b279dc9","/privacy-policy/index.html":"c9586862db9d372e8725275e0929f2fddaea7e27fdd864e4a92b05e4de6552af","/_astro/client.8312f149.js":"d45197b3cfcd36383c462bf4c461df10cda283e3d6f6782dce2fee0a63c7e80b","/fonts/PlusJakartaSans-Regular.ttf":"ca4dfc7bb14651276e66f0897f4dca7883edeaf4d6be5e7e24a76e0c07fea1fa","/fonts/ReadexPro-Regular.ttf":"e20a8c1a77216ab93adb934f5acea899c88b918383e9a9a4fa3f7b946e61b72a","/_astro/interview_trailer.d284348a.mp4":"f4b69dd11c5797d85de5309d99917d9df79027602bcfb586208d7a9d77080a4d"}}
+[debug] [2023-01-25T12:00:41.434Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/322405823179/sites/interview-app-9/versions/bee74eff0f6a1df0:populateFiles 200
+[debug] [2023-01-25T12:00:41.434Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/322405823179/sites/interview-app-9/versions/bee74eff0f6a1df0:populateFiles {"uploadRequiredHashes":["dbfde063f192e509b7310e55bd188c61a881c81f9142c8f9e71b2c02ae8f63a2","c9586862db9d372e8725275e0929f2fddaea7e27fdd864e4a92b05e4de6552af"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/interview-app-9/versions/bee74eff0f6a1df0/files"}
+[debug] [2023-01-25T12:00:41.436Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/interview-app-9/versions/bee74eff0f6a1df0/files/dbfde063f192e509b7310e55bd188c61a881c81f9142c8f9e71b2c02ae8f63a2 [none]
+[debug] [2023-01-25T12:00:41.436Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/interview-app-9/versions/bee74eff0f6a1df0/files/dbfde063f192e509b7310e55bd188c61a881c81f9142c8f9e71b2c02ae8f63a2 [stream]
+[debug] [2023-01-25T12:00:41.439Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/interview-app-9/versions/bee74eff0f6a1df0/files/c9586862db9d372e8725275e0929f2fddaea7e27fdd864e4a92b05e4de6552af [none]
+[debug] [2023-01-25T12:00:41.439Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/interview-app-9/versions/bee74eff0f6a1df0/files/c9586862db9d372e8725275e0929f2fddaea7e27fdd864e4a92b05e4de6552af [stream]
+[debug] [2023-01-25T12:00:41.440Z] [hosting][populate queue][FINAL] {"max":987,"min":987,"avg":987,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":992}
+[debug] [2023-01-25T12:00:41.440Z] [hosting] uploads queued: 2
+[debug] [2023-01-25T12:00:42.679Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/interview-app-9/versions/bee74eff0f6a1df0/files/c9586862db9d372e8725275e0929f2fddaea7e27fdd864e4a92b05e4de6552af 200
+[debug] [2023-01-25T12:00:42.679Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/interview-app-9/versions/bee74eff0f6a1df0/files/c9586862db9d372e8725275e0929f2fddaea7e27fdd864e4a92b05e4de6552af [stream]
+[debug] [2023-01-25T12:00:42.681Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/interview-app-9/versions/bee74eff0f6a1df0/files/dbfde063f192e509b7310e55bd188c61a881c81f9142c8f9e71b2c02ae8f63a2 200
+[debug] [2023-01-25T12:00:42.682Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/interview-app-9/versions/bee74eff0f6a1df0/files/dbfde063f192e509b7310e55bd188c61a881c81f9142c8f9e71b2c02ae8f63a2 [stream]
+[debug] [2023-01-25T12:00:42.682Z] [hosting][upload queue][FINAL] {"max":1247,"min":1243,"avg":1245,"active":0,"complete":2,"success":2,"errored":0,"retried":0,"total":2,"elapsed":1247}
+[info] ✔  hosting[interview-app-9]: file upload complete 
+[debug] [2023-01-25T12:00:42.686Z] [hosting] deploy completed after 2292ms
+[debug] [2023-01-25T12:00:42.686Z] [
+  {
+    "config": {
+      "site": "interview-app-9",
+      "public": "dist",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ]
+    },
+    "version": "projects/322405823179/sites/interview-app-9/versions/bee74eff0f6a1df0"
+  }
+]
+[info] i  hosting[interview-app-9]: finalizing version... 
+[debug] [2023-01-25T12:00:42.689Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/interview-app-9/versions/bee74eff0f6a1df0 updateMask=status%2Cconfig
+[debug] [2023-01-25T12:00:42.689Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/interview-app-9/versions/bee74eff0f6a1df0 {"status":"FINALIZED","config":{}}

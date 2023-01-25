@@ -24,7 +24,16 @@ const socialItems = [
 <footer
   class="w-full p-4 space-y-2 bg-background md:flex md:flex-row md:items-center md:justify-between md:space-y-0 md:p-6"
 >
-  <p class="text-sm font-bold">© 2022 Interview</p>
+  <span class="inline-flex space-x-4">
+    <p class="text-sm font-bold">© 2023 Interview.</p>
+    <a
+      href="http://felixguenthner.com"
+      target="_blank"
+      class="text-sm font-bold"
+    >
+      Made by Felix Günthner
+    </a>
+  </span>
 
   <div class="flex flex-row space-x-4">
     <ul class="flex flex-wrap items-center space-x-4">
@@ -45,10 +54,13 @@ const socialItems = [
       {
         socialItems.map((data) => (
           <li>
-            <a href={data.link} target="_blank" rel="noopener noreferrer" aria-label={data.title}>
-              <div class="w-4 h-4">
-                <Icon name={data.icon} />
-              </div>
+            <a
+              href={data.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={data.title}
+            >
+              <div class="w-4 h-4"></div>
             </a>
           </li>
         ))
@@ -56,3 +68,5 @@ const socialItems = [
     </ul>
   </div>
 </footer>
+
+<!-- <Icon name={data.icon} /> -->
