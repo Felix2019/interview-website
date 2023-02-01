@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site": "interview-app-9",
+    "site": "interview-554ba",
     "public": "dist",
     "ignore": [
       "firebase.json",
